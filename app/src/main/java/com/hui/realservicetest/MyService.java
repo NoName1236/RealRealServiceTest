@@ -60,6 +60,7 @@ public class MyService extends Service {
             public void run() {
                 //specific logic
                 Log.e(TAG, "run: logic in start command run methods");
+                stopSelf();//服务执行完成后自动停止
             }
         }).start();
         return super.onStartCommand(intent, flags, startId);
